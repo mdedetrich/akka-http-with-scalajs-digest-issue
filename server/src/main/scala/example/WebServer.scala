@@ -60,6 +60,11 @@ object WebServer {
     printResources("public/stylesheets/5f59caadb44c8d720a2a5d9fc948eed0-main.css")
 
 
+    // These succeed but with an incorrect uri
+
+    printResourceAsStream("/public//8582ad69409ecf661cc901a281d8a30c-client-fastopt.js")
+    printResourceAsStream("/public//caf72f3eb2cfcf894c08bc1f205ed45f-client-fastopt.js.map")
+    printResources("public//8582ad69409ecf661cc901a281d8a30c-client-fastopt.js")
 
 
     Http().bindAndHandle(service.route, interface, port)
